@@ -1,3 +1,28 @@
+### A fork from Nyx0uf/qlImageSize
+
+This fork removes file type labels on thumbnails.
+For those who prefer a more native look of macOS with _qlImageSize_, like me :)
+
+
+### Usage
+
+- First you will need Xcode installed on your mac.
+
+- Double click **qlImageSize.xcodeproj** to open the Xcode project.
+Click the project name at the right of the button _Run_ & _Stop_, and click **Manage Schemes ...**.
+Then **Edit** the _qlImageSize_, change the build type of _Run_ from _Debug_ to **Release**.
+
+- If you prefer, go to **Preferences ... >> Locations**, and change the target path to **Relative**.
+
+- Click the **Run** button, and find the **qlImageSize.qlgenerator** under the target directory.
+Copy it into your quick look folder `/Library/QuickLook`.
+
+- Finally run `qlmanage -r` in Terminal.
+
+- If you are running macOS 10.11.4 (OS X El Capitan), you can just get the [qlImageSize.qlgenerator.zip](https://github.com/fishswing/qlImageSize/raw/master/qlImageSize.qlgenerator.zip).
+
+---
+
 # qlImageSize
 
 This is a **QuickLook** plugin for OS X *10.8+* to display the dimensions of an image and its file size in the title bar.
