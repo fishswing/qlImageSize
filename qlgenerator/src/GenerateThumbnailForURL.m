@@ -34,9 +34,10 @@ OSStatus GenerateThumbnailForURL(__unused void* thisInterface, QLThumbnailReques
 		extension = [extension lowercaseString];
 
 		// Create the properties dic
-		CFTypeRef keys[1] = {kQLThumbnailPropertyExtensionKey};
-		CFTypeRef values[1] = {(__bridge CFStringRef)extension};
-		CFDictionaryRef properties = CFDictionaryCreate(kCFAllocatorDefault, (const void**)keys, (const void**)values, 1, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+		// CFTypeRef keys[1] = {kQLThumbnailPropertyExtensionKey};
+		// CFTypeRef values[1] = {(__bridge CFStringRef)extension};
+		// CFDictionaryRef properties = CFDictionaryCreate(kCFAllocatorDefault, (const void**)keys, (const void**)values, 1, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+		CFDictionaryRef properties = NULL;
 
 		// Check by extension because it's highly unprobable that an UTI for these formats is declared
 		// the simplest way to declare one is creating a dummy automator app and adding imported/exported UTI conforming to public.image
